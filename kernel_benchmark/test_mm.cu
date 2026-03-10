@@ -977,9 +977,9 @@ int main(int argc, char** argv)
     
     // Print performance results
     printf("\n========== Performance Results ==========\n");
-    PrintPerformance("BF16_triple_bitmap", milliseconds_BF16TripleBitmap, tflops_BF16TripleBitmap, totalError_BF16TripleBitmap_vs_tc);
-    PrintPerformance("CuBLAS_TC", milliseconds_cublas_tc, tflops_cublas_tc, 0.0);
-    PrintPerformance("CuBLAS_non-TC", milliseconds_cublas_no_tc, tflops_cublas_no_tc, totalError_cublas_tc_vs_no_tc);
+    PrintPerformance("BF16_triple_bitmap", milliseconds_BF16TripleBitmap, tflops_BF16TripleBitmap, totalError_BF16TripleBitmap_vs_no_tc);
+    PrintPerformance("CuBLAS_TC", milliseconds_cublas_tc, tflops_cublas_tc, totalError_cublas_tc_vs_no_tc);
+    PrintPerformance("CuBLAS_non-TC", milliseconds_cublas_no_tc, tflops_cublas_no_tc, 0.0);
     
     // Free remaining host memory
     free(D_cublas_no_tc_h);
