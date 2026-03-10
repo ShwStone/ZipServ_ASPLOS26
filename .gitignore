@@ -1,0 +1,8 @@
+*.o
+*.so
+kernel_benchmark/test_mm
+kernel_benchmark/test_decompress
+.github
+.vscode
+*.log
+*.csv

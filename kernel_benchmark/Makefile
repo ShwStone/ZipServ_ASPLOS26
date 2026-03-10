@@ -11,7 +11,7 @@
 
 # host compiler
 HOST_COMPILER ?= g++
-CUDA_PATH ?= /usr/local/cuda
+CUDA_PATH ?= /opt/cuda
 NVCC          := $(CUDA_PATH)/bin/nvcc -ccbin $(HOST_COMPILER)
 
 # internal flags
@@ -28,7 +28,7 @@ ALL_LDFLAGS += $(ALL_CCFLAGS)
 ALL_LDFLAGS += $(addprefix -Xlinker ,$(LDFLAGS))
 
 # Common includes and paths for CUDA
-INCLUDES  := -I/usr/local/cuda/include/ 
+INCLUDES  := -I$(CUDA_PATH)/include/ 
 LIBRARIES := -lcublas 
 LIBRARIES += -lcusparse 
 
